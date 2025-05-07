@@ -1,0 +1,41 @@
+/*
+  # Create bookings table
+
+  1. New Tables
+    - `bookings`
+      - `id` (uuid, primary key)
+      - `full_name` (text, required)
+      - `email` (text, required)
+      - `phone` (text, optional)
+      - `tour_type` (text, required)
+      - `participants` (integer, required)
+      - `special_requests` (text, optional)
+      - `selected_date` (date, required)
+      - `price` (numeric, required)
+      - `created_at` (timestamptz, default now())
+
+  2. Security
+    - Enable RLS on `bookings` table
+    - Add policy for public to insert bookings
+*/
+
+CREATE TABLE IF NOT EXISTS bookings (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  full_name text NOT NULL,
+  email text NOT NULL,
+  phone text,
+  tour_type text NOT NULL,
+  participants integer NOT NULL,
+  special_requests text,
+  selected_date date NOT NULL,
+  price numeric NOT NULL,
+  created_at timestamptz DEFAULT now()
+);
+
+ALTER TABLE bookings ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public to insert bookings"
+  ON bookings
+  FOR INSERT
+  TO public
+  WITH CHECK (true);
