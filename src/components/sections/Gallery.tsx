@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<null | { url: string, alt: string }>(null);
   
+<<<<<<< HEAD
   // Gallery images - in a real app these would likely come from a CMS or API
   const galleryImages = [
     {
@@ -34,6 +35,37 @@ const Gallery = () => {
     {
       url: "https://images.pexels.com/photos/176400/pexels-photo-176400.jpeg",
       alt: "Cocoa Beach bioluminescent kayak tour",
+=======
+  const galleryImages = [
+    {
+      url: "https://images.pexels.com/photos/141767/pexels-photo-141767.jpeg",
+      alt: "Family watching rocket launch from Launch Zone Charters boat",
+      category: "rocket",
+    },
+    {
+      url: "https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg",
+      alt: "Rocket launch with bright flames",
+      category: "rocket",
+    },
+    {
+      url: "https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg",
+      alt: "Night kayaking under starry sky",
+      category: "bioluminescent",
+    },
+    {
+      url: "https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg",
+      alt: "Bioluminescent plankton in ocean water",
+      category: "bioluminescent",
+    },
+    {
+      url: "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg",
+      alt: "NASA rocket launch with smoke trail",
+      category: "rocket",
+    },
+    {
+      url: "https://images.pexels.com/photos/3389982/pexels-photo-3389982.jpeg",
+      alt: "Kayaking adventure at twilight",
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
       category: "bioluminescent",
     },
   ];

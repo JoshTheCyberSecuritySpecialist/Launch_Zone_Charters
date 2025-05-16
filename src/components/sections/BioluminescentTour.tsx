@@ -79,7 +79,11 @@ const BioluminescentTour = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 z-0"
         style={{ 
+<<<<<<< HEAD
           backgroundImage: "url('https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg')" 
+=======
+          backgroundImage: "url('https://images.pexels.com/photos/3389982/pexels-photo-3389982.jpeg')" 
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
         }}
       ></div>
       
@@ -97,7 +101,11 @@ const BioluminescentTour = () => {
           <div>
             <div className="relative h-80 md:h-96 lg:h-[500px] rounded-xl overflow-hidden">
               <img 
+<<<<<<< HEAD
                 src="https://images.pexels.com/photos/216927/pexels-photo-216927.jpeg" 
+=======
+                src="https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg" 
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
                 alt="Bioluminescent kayaking tour at night in Florida" 
                 className="absolute inset-0 w-full h-full object-cover" 
               />

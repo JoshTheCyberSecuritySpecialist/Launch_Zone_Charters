@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
+=======
+import { useParams, Link } from 'react-router-dom';
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
 import { supabase } from '../lib/supabase';
 import type { BlogPost } from '../lib/supabase';
 import { Calendar, Tag, ArrowLeft } from 'lucide-react';
@@ -32,6 +36,14 @@ const BlogPostPage = () => {
     }
   }, [slug]);
 
+<<<<<<< HEAD
+=======
+  const handleBookClick = () => {
+    // Navigate to home page and scroll to booking section
+    window.location.href = '/#booking';
+  };
+
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
   if (loading) {
     return (
       <div className="min-h-screen bg-space-black pt-32">
@@ -65,13 +77,22 @@ const BlogPostPage = () => {
       {/* Content */}
       <div className="container mx-auto px-4 -mt-32 relative">
         <article className="max-w-4xl mx-auto bg-steel-gray/20 backdrop-blur-sm rounded-xl p-8">
+<<<<<<< HEAD
           <a 
             href="/blog"
+=======
+          <Link 
+            to="/blog"
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
             className="inline-flex items-center text-gray-400 hover:text-white mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Blog
+<<<<<<< HEAD
           </a>
+=======
+          </Link>
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
 
           <h1 className="text-3xl md:text-4xl font-orbitron font-bold text-white mb-4">
             {post.title}
@@ -112,12 +133,21 @@ const BlogPostPage = () => {
             <p className="text-gray-300 mb-6">
               Experience the thrill of rocket launches and bioluminescent waters firsthand.
             </p>
+<<<<<<< HEAD
             <a 
               href="/#booking"
               className="inline-block px-8 py-3 bg-rocket-red hover:bg-red-700 text-white font-orbitron font-semibold rounded-md transition duration-300"
             >
               Book Your Tour Now
             </a>
+=======
+            <button 
+              onClick={handleBookClick}
+              className="inline-block px-8 py-3 bg-rocket-red hover:bg-red-700 text-white font-orbitron font-semibold rounded-md transition duration-300"
+            >
+              Book Your Tour Now
+            </button>
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
           </div>
         </div>
       </div>

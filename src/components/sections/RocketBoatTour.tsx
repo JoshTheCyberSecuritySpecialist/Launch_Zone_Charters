@@ -91,7 +91,11 @@ const RocketBoatTour = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 z-0"
         style={{ 
+<<<<<<< HEAD
           backgroundImage: "url('https://images.pexels.com/photos/586053/pexels-photo-586053.jpeg')" 
+=======
+          backgroundImage: "url('https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg')" 
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
         }}
       ></div>
       
@@ -109,7 +113,11 @@ const RocketBoatTour = () => {
           <div>
             <div className="relative h-80 md:h-96 lg:h-[500px] rounded-xl overflow-hidden">
               <img 
+<<<<<<< HEAD
                 src="https://images.pexels.com/photos/14902529/pexels-photo-14902529.jpeg" 
+=======
+                src="https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg" 
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
                 alt="Private rocket launch boat tour near Kennedy Space Center" 
                 className="absolute inset-0 w-full h-full object-cover" 
               />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rocket, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
+<<<<<<< HEAD
 
 const Footer = () => {
   const footerLinks = [
@@ -8,6 +9,20 @@ const Footer = () => {
     { name: 'Book', href: '#booking' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
+=======
+import { Link, useLocation } from 'react-router-dom';
+
+const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  const footerLinks = [
+    { name: 'Home', href: '/#home' },
+    { name: 'Tours', href: '/#rocket-boat-tours' },
+    { name: 'Book', href: '/#booking' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Contact', href: '/#contact' },
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
   ];
 
   const socialLinks = [
@@ -16,18 +31,51 @@ const Footer = () => {
     { name: 'YouTube', href: '#', icon: Youtube },
   ];
 
+<<<<<<< HEAD
+=======
+  const renderLink = (link: { name: string; href: string }) => {
+    if (link.href.startsWith('/#') && !isHomePage) {
+      return (
+        <Link
+          to={link.href.substring(1)}
+          className="text-gray-300 hover:text-white transition"
+        >
+          {link.name}
+        </Link>
+      );
+    }
+
+    return (
+      <a
+        href={link.href}
+        className="text-gray-300 hover:text-white transition"
+      >
+        {link.name}
+      </a>
+    );
+  };
+
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
   return (
     <footer id="contact" className="bg-steel-gray">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and info */}
           <div className="flex flex-col">
+<<<<<<< HEAD
             <div className="flex items-center">
+=======
+            <Link to="/" className="flex items-center">
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
               <Rocket className="h-10 w-10 text-rocket-red" />
               <span className="ml-3 text-xl font-bold font-orbitron tracking-wider text-white">
                 Launch Zone Charters
               </span>
+<<<<<<< HEAD
             </div>
+=======
+            </Link>
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
             <p className="mt-4 text-gray-300">
               Experience rocket launches from the water and glowing bioluminescent kayak adventures in Titusville, Florida.
             </p>
@@ -45,12 +93,16 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <a
                     href={link.href}
                     className="text-gray-300 hover:text-white transition"
                   >
                     {link.name}
                   </a>
+=======
+                  {renderLink(link)}
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
                 </li>
               ))}
             </ul>

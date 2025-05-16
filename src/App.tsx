@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+=======
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import TourStatus from './components/sections/TourStatus';
@@ -16,7 +20,11 @@ import BlogAdmin from './pages/BlogAdmin';
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
+=======
+    <Router basename={import.meta.env.BASE_URL}>
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
       <div className="min-h-screen bg-space-black text-white font-space">
         <Navbar />
         <Routes>
@@ -35,6 +43,10 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/admin/blog" element={<BlogAdmin />} />
+<<<<<<< HEAD
+=======
+          <Route path="*" element={<Navigate to="/" replace />} />
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
         </Routes>
         <Footer />
       </div>

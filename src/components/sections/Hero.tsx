@@ -12,7 +12,11 @@ const Hero = () => {
       id="home" 
       className="relative h-screen flex items-center justify-center bg-cover bg-center" 
       style={{ 
+<<<<<<< HEAD
         backgroundImage: "url('https://images.pexels.com/photos/23764/pexels-photo.jpg')" 
+=======
+        backgroundImage: "url('https://images.pexels.com/photos/23769/pexels-photo.jpg')" 
+>>>>>>> a922503 (Update LaunchTracker component with countdown fix and error handling)
       }}
     >
       {/* Overlay */}
